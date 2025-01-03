@@ -8,12 +8,6 @@ import time
 def get_row_count(csv_file):
     """
     Returns the number of rows in the CSV file, excluding the header row.
-
-    Args:
-        csv_file (str): Path to the CSV file.
-
-    Returns:
-        int: The number of rows in the CSV file, excluding the header row.
     """
     row_count = 0
     try:
@@ -30,11 +24,8 @@ def get_row_count(csv_file):
 def write_member_data(data, csv_file):
     """
     Writes member data to CSV files.
-
-    Args:
-        data (dict): Member data dictionary.
-        csv_file (str): Path to the CSV file.
     """
+
     with open(csv_file, 'a', newline='', encoding='utf-8') as csv_f:
         csv_writer = csv.writer(csv_f)
         terms = data.get('terms', {}).get('item', [])
@@ -65,14 +56,6 @@ def write_member_data(data, csv_file):
 def fetch_members(url, headers, requests_per_second):
     """
     Fetches member data from the API with rate limit handling.
-
-    Args:
-        url (str): API endpoint URL.
-        headers (dict): Request headers.
-        requests_per_second (float/int): Target requests per second.
-
-    Returns:
-        str: The next URL for pagination, or None if no more data.
     """
     response = None
     try:
