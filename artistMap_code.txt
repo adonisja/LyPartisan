@@ -1,0 +1,27 @@
+ # file_path = 'artists_pairs_short.txt'
+    # artistMap = Graph()
+    # artistMap.create_artistMap(file_path, ',')
+    # print(f'Total Vertices: {artistMap.size_nodes()}')
+    # print(f'Total Edges: {artistMap.size_edges()}')
+
+    # source = input('Enter the source artist: ')
+    # if not artistMap.has_node(source):
+    #     print(f'{source} is not in the Graph. Please try again')
+    #     return
+
+    
+    # while True:
+    #     target = input("Enter the target artist or -1 to exit: ")
+    #     if target == '-1':
+    #         print(f'Thank you for playing. Goodbye!')
+    #         break
+    #     if not artistMap.has_node(target):
+    #         print(f'{target} was not found! Check the spelling or try a different artist')
+    #         continue
+    #     path = artistMap.shortest_path(source, target)
+    #     if path:
+    #         print(f'Shortest Path from {source} to {target} is:\n{" -> ".join(path)}')
+    #     else:
+    #         print(f'No path exists between {source} and {target}.')
+
+    terms = data.get('terms', {}).get('item', [])
